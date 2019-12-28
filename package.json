@@ -1,0 +1,27 @@
+{
+  "name": "react",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "4.4.1",
+    "jquery": "3.4.1",
+    "mdbreact": "4.23.1",
+    "popper.js": "1.16.0",
+    "prop-types": "15.7.2",
+    "rc-switch": "1.9.0",
+    "react": "16.9.0",
+    "react-bootstrap": "^0.33.1",
+    "react-bootstrap-switch": "15.5.3",
+    "react-dom": "16.9.0",
+    "react-rangeslider": "2.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-scripts": "latest"
+  }
+}
