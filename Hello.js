@@ -78,13 +78,19 @@ class Body extends React.Component{
 class Button extends React.Component{
   constructor(props){
     super(props);
-    this.handleClick = this.handleClick.bind(this);
+    this.stae ={
+      name:this.props.name
+    };
+    this.handleClick = this.handleClick.bind(this);f
     this.handleClickOut = this.handleClickOut.bind(this);
     this.playAudio = this.playAudio.bind(this);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this); 
+  }
+  componentDidMount(){
+    document.onkeypress = this.handleKeyDown(event);
   }
   handleKeyDown(event){
-    alert(event.target.name);
+    alert(event.key);
   }
    handleClick(event){
      let target = event.target;
@@ -103,7 +109,7 @@ class Button extends React.Component{
    }
   render(){
     return (
-      <div className="button" style={{width:"65px"}} id={this.props.id} onMouseUp   ={this.handleClickOut} onMouseDown={this.handleClick} onClick={this.playAudio} onKeyPress = {this.handleKeyDown}>
+      <div className="button" style={{width:"65px"}} id={this.props.id} onMouseUp   ={this.handleClickOut} onMouseDown={this.handleClick} onClick={this.playAudio} >
         {this.props.name}
         <audio className="clip" id={this.props.name}>
             <source src={this.props.src} type="audio/mp3"/>
